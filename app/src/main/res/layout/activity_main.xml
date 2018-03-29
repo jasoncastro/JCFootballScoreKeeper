@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.digitalzombiz.android.myfootballscorer.MainActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/img_bg"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/uni_sans_regular"
+            android:text="Today's Match Football"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_team_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_helmet_team_a" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/blur_medium"
+                android:gravity="center_vertical"
+                android:text="vs"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/img_team_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_helmet_team_b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_score_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/norwester"
+                    android:text="06"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="70dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/uni_sans_thin"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textColor="#ffffff"
+                    android:text="Team A" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_score_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/norwester"
+                    android:text="01"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="70dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/uni_sans_thin"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp"
+                    android:text="Team B" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/divider"
+                tools:ignore="NotSibling" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_a_6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/norwester"
+                            android:onClick="AddTeamASix"
+                            android:text="6"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_a_3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/norwester"
+                            android:onClick="AddTeamAThree"
+                            android:text="3"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_a_2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/norwester"
+                            android:onClick="AddTeamATwo"
+                            android:text="2"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_a_1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/norwester"
+                            android:onClick="AddTeamAOne"
+                            android:text="1"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+                    </GridLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/blur_medium"
+                        android:textColor="#ffffff"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:text="Add Score" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_b_6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/norwester"
+                            android:onClick="AddTeamBSix"
+                            android:text="6"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_b_3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/norwester"
+                            android:onClick="AddTeamBThree"
+                            android:text="3"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_b_2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/norwester"
+                            android:onClick="AddTeamBTwo"
+                            android:text="2"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+
+                        <Button
+                            android:id="@+id/btn_addscore_team_b_1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circ_button"
+                            android:fontFamily="@font/blur_medium"
+                            android:onClick="AddTeamBOne"
+                            android:text="1"
+                            android:textColor="#4E54B9"
+                            android:textSize="36dp" />
+                    </GridLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/norwester"
+                        android:textColor="#ffffff"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:text="Add Score" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_reset_scores"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_border_transparent"
+        android:fontFamily="@font/blur_medium"
+        android:textColor="#ffffff"
+        android:onClick="resetDisplay"
+        android:text="RESET"
+        android:textSize="24sp" />
+
+</RelativeLayout>
